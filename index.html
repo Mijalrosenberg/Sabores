@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sabores</title>
+  <!--a href="pantalla2.html" class="btn-naranja">Ver nuestros servicios</a-->
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="icononaranja.png">
@@ -11,7 +12,7 @@
 <body>
   <header>
     <div class="logo">
-      <a href="index.html">
+      <a href="pantalla1.html">
         <img src="logomblanco.png" alt="Logo Sabores">
       </a>
     </div>
@@ -25,7 +26,20 @@
     </nav>
   </header>
   <main>
-    <h1>Menu del dia</h1>
+    <section class="carrusel">
+      <div class="slide activo"><img src="tarta-de-cebolla.jpg" alt="Foto 1"></div>
+      <div class="slide"><img src="empanadas.jpg" alt="Foto 2"></div>
+      <div class="slide"><img src="images (2).jpg" alt="Foto 3"></div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </section>
+
+    <section class="contenido">
+      <h1>Sabores</h1>
+      <h2>Reserva tu almuerzo de todos los dias</h2>
+      <p>Para que todos los dias tengas un almuerzo nutritivo, rico y saludable al alcance de UN CLICK</p>
+      <a href="btn-menu.html" class="btn-naranja">Menu</a>
+    </section>
   </main>
   <footer>
     <div class="footer-col">
@@ -48,3 +62,29 @@
       <p>11 de Septiembre de 1888 2876<br>CABA, Buenos Aires</p>
     </div>
   </footer>
+
+
+  <script>
+    // Carrusel simple con JS
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+
+    function mostrarSlide(i) {
+      slides.forEach(slide => slide.classList.remove('activo'));
+      slides[i].classList.add('activo');
+    }
+
+    prev.addEventListener('click', () => {
+      index = (index === 0) ? slides.length - 1 : index - 1;
+      mostrarSlide(index);
+    });
+
+    next.addEventListener('click', () => {
+      index = (index === slides.length - 1) ? 0 : index + 1;
+      mostrarSlide(index);
+    });
+  </script> 
+</body>
+</html>
