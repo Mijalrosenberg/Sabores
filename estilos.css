@@ -1,0 +1,260 @@
+/* estilos.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf5;
+    color: #333;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4b129;
+    padding: 1rem 2rem;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+/* li:hover { preguntar que onda
+      color: #f4b129;
+      background-color: white;
+      padding: 0.2rem 0.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+*/
+  .logo img {
+    width: 50px;
+    padding: none;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .carrusel {
+    position: relative;
+    max-width: 800px; /* Aumentá este valor */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slide {
+    display: none;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 300px; /* Fijás una altura mayor */
+    object-fit: cover; /* Para que la imagen no se deforme */
+    border-radius: 12px;
+  }
+  
+  .slide.activo {
+    display: block;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f4b0294b;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 30%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: #f4b129;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .contenido {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  
+  .contenido h1 {
+    color: #f4b129;
+    font-size: 3rem;
+  }
+
+  footer {
+    background-color: #f4b129; /* Igual que el header */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-col {
+    flex: 1 1 250px;
+    min-width: 200px;
+  }
+  
+  .footer-col h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.5rem;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-col li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-col a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-col a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-col i {
+    margin-right: 8px;
+    color: white;
+  }
+  .btn-naranja {
+    display: inline-block;
+    background-color: #f4b129;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-naranja:hover {
+    color: #f4b129;
+    background-color: white;
+  }
+  .slide {
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) { /*tablets*/
+  header {  /*Cambia el header a columna (logo arriba y menú abajo)*/
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul { /*El menu se vuelve vertical y centrado*/
+    flex-direction: column; /*como ocultar menu en las tres rayitas*/
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .logo img {
+    margin-bottom: 1rem;
+  }
+
+  .carrusel { /*Aumenta el alto del carrusel para pantallas más angostas*/
+    max-width: 100%;
+  }
+
+  .slide img {
+    height: 200px; /* Altura menor en celulares */
+  }
+
+  footer {  /*El footer pasa de 3 columnas a apilado vertical*/
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-col {
+    min-width: 100%;
+  }
+
+  .contenido h1 {
+    font-size: 2rem;
+  }
+
+  .btn-naranja {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) { /*telefonos mas chicos*/
+  .contenido h1 {
+    font-size: 1.6rem;
+  }
+
+  .contenido h2 {
+    font-size: 1.2rem;
+  }
+
+  .slide img {
+    height: 160px; /*seguir achicando imagenes*/
+  }
+
+  .btn-naranja {
+    padding: 1rem; /*aumentar padding para mayor tocabilidad*/
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
+
+  .footer-col h3 {
+    font-size: 1rem;
+  }
+}
