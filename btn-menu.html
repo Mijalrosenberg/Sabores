@@ -15,7 +15,10 @@
         <img src="logomblanco.png" alt="Logo Sabores">
       </a>
     </div>
-    <nav>
+    <a href="javascript:void(0);" class="icono" onclick="MiFuncion()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="navegador">
       <ul>
         <li><a href="viandas.html">Viandas</a></li>
         <li><a href="menu-del-dia.html">Menu del dia</a></li>
@@ -25,8 +28,85 @@
     </nav>
   </header>
   <main>
-    <h1>Menu</h1>
+    <h2 class="titulo-seccion-menu">Nuestro Menú</h2>
+    <section class="seccion-carrusel">
+      <h2>Tartas</h2>
+      <div class="carrusel">
+        <button class="prev">&#10094;</button>
+        <div class="contenedor-slides">
+          <img src="tarta-acelga.png" alt="Tarta 1">
+          <img src="tarta-calabaza.png" alt="Tarta 2">
+          <img src="tarta-cebolla.png" alt="Tarta 3">
+          <img src="tarta-choclo.png" alt="Tarta 4">
+          <img src="tarta-puerro.png" alt="Tarta 5">
+          <img src="tarta-zapallito.png" alt="Tarta 6">
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="seccion-carrusel">
+      <h2>Bebidas</h2>
+      <div class="carrusel">
+        <button class="prev">&#10094;</button>
+        <div class="contenedor-slides">
+          <img src="licuado-frutilla.png" alt="Licuado frutilla">
+          <img src="limonada.png" alt="Limonada">
+          <img src="coca-zero.png" alt="Coca Zero">
+          <img src="sprite.png" alt="Sprite">
+          <img src="jugo.png" alt="Jugo naranja">
+          <img src="agua.png" alt="Agua">
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="seccion-carrusel">
+      <h2>Ensaladas</h2>
+      <div class="carrusel">
+        <button class="prev">&#10094;</button>
+        <div class="contenedor-slides">
+          <img src="ensalada-de-papa.png" alt="Ensalada de papa">
+          <img src="ensalada-caprese.png" alt="Ensalada de caprese">
+          <img src="Ensalada.png" alt="Ensalada cesar">
+          <img src="ensalada-zanahoria-huevo.png" alt="Ensalada de zanahoria y huevo ">
+          <img src="ensalada-tomate-huevo.png" alt="Ensalada de tomate y huevo">
+          <img src="ensalada-completa.png" alt="Ensalada completa">
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="seccion-carrusel">
+      <h2>Empanadas</h2>
+      <div class="carrusel">
+        <button class="prev">&#10094;</button>
+        <div class="contenedor-slides">
+          <img src="Empanada.png" alt="Empanadas carne">
+          <img src="empanadas-queso.png" alt="Empanada de queso">
+          <img src="empanadas-calabaza.png" alt="Empanada de calabaza">
+          <img src="empanadas-humita.png" alt="Empanadas de humita">
+          <img src="empanada-verdura.png" alt="Empanadas de verdura">
+          <img src="empanadas-pollo.png" alt="Empanadas de pollo">
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    <section class="seccion-carrusel">
+      <h2>Postres</h2>
+      <div class="carrusel">
+        <button class="prev">&#10094;</button>
+        <div class="contenedor-slides">
+          <img src="chocotorta.png" alt="Chocotorta">
+          <img src="cheese-cake.png" alt="Cheese cake">
+          <img src="ensalada-frutas.png" alt="Ensalada de frutas">
+          <img src="torta-manzana.png" alt="Torta de manzana">
+          <img src="brownie.png" alt="Brownie">
+          <img src="cookie.png" alt="Postres 6">
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
   </main>
+  
   <footer>
     <div class="footer-col">
       <h3>Redes Sociales</h3>
@@ -48,3 +128,53 @@
       <p>11 de Septiembre de 1888 2876<br>CABA, Buenos Aires</p>
     </div>
   </footer>
+  <script>
+    function MiFuncion() {
+    // aquí se define el ID del elemento que va a tomar la clase
+    var x = document.getElementById("navegador");
+    if (x.className === "") {
+    // esta es la clase que se agrega al elemento con el
+    id="navegador"
+    x.className += "responsive";
+    } else {
+    x.className = "";
+    }
+    }
+      document.querySelectorAll('.carrusel').forEach(carrusel => {
+        const contenedor = carrusel.querySelector('.contenedor-slides');
+        const prev = carrusel.querySelector('.prev');
+        const next = carrusel.querySelector('.next');
+  
+        let index = 0;
+        const slides = contenedor.children;
+        const totalSlides = slides.length;
+        const visibleSlides = 3;
+  
+        const updateCarrusel = () => {
+          const slideWidth = slides[0].offsetWidth + 16; // incluye padding
+          contenedor.style.transform = `translateX(-${index * slideWidth}px)`;
+        };
+  
+        prev.addEventListener('click', () => {
+  if (index === 0) {
+    index = totalSlides - visibleSlides;
+  } else {
+    index--;
+  }
+  updateCarrusel();
+});
+
+next.addEventListener('click', () => {
+  if (index >= totalSlides - visibleSlides) {
+    index = 0;
+  } else {
+    index++;
+  }
+  updateCarrusel();
+});
+  
+        window.addEventListener('resize', updateCarrusel);
+      });
+    </script>
+  </body>
+  </html>

@@ -15,7 +15,10 @@
         <img src="logomblanco.png" alt="Logo Sabores">
       </a>
     </div>
-    <nav>
+    <a href="javascript:void(0);" class="icono" onclick="MiFuncion()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="navegador">
       <ul>
         <li><a href="viandas.html">Viandas</a></li>
         <li><a href="menu-del-dia.html">Menu del dia</a></li>
@@ -24,9 +27,48 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Contacto</h1>
-  </main>
+    <main>
+      <section class="contacto">
+        <h2>Contactanos y encontranos</h2>
+  
+        <div class="info-contacto">
+          <p><strong>Teléfono:</strong> +54 11 6119-3764</p>
+          <p><strong>Email:</strong> info@sitioweb.com</p>
+          <p><strong>Dirección:</strong> 11 de Septiembre de 1888 2876, CABA</p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.206232095934!2d-58.45810468477134!3d-34.650449880453246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb3bb9d662fb%3A0x6cc2305d38764e01!2s11%20de%20Septiembre%20de%201888%202876%2C%20C1437%20CABA!5e0!3m2!1ses!2sar!4v1715362060000!5m2!1ses!2sar"
+          width="100%" height="250" style="border:0; border-radius:8px; margin-top:1.5rem;"
+          allowfullscreen="" loading="lazy"></iframe>
+        <div class="Formulario">
+          <form>
+            <h2>
+                Tenes dudas o algun pedido espacial? Contactanos!
+            </h2>
+            <div class="form_input">
+                <label>Nombre completo
+                    <input type="text" placeholder="Tu nombre">
+                </label>
+            </div>
+            <div class="form_input">
+                <label for="email">Email</label>
+                <input type="email" placeholder="tunombre@gmail.com" id="email">
+            </div>
+            <div class="form_input">
+              <label for="Telefono">Telefono</label>
+              <input type="Telefono" placeholder="11 2222-3333" id="telefono">
+          </div>
+            <div class="form_input">
+                <label for="mensaje">Mensaje</label>
+                <textarea rows="4" maxlength="140" placeholder="Deja tu mensaje" id="mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn-form">Enviar</button>
+        </form>
+        </div>
+  
+        
+      </section>
+    </main>
   <footer>
     <div class="footer-col">
       <h3>Redes Sociales</h3>
@@ -48,3 +90,17 @@
       <p>11 de Septiembre de 1888 2876<br>CABA, Buenos Aires</p>
     </div>
   </footer>
+
+  <script>
+    function MiFuncion() {
+    // aquí se define el ID del elemento que va a tomar la clase
+    var x = document.getElementById("navegador");
+    if (x.className === "") {
+    // esta es la clase que se agrega al elemento con el
+    id="navegador"
+    x.className += "responsive";
+    } else {
+    x.className = "";
+    }
+    }
+  </script>
