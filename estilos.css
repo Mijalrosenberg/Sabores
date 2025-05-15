@@ -268,13 +268,14 @@ body {
   .footer-col {
     margin-bottom: 0.3rem;
   }
-  }
   nav {
     display: none;
   }
   .responsive {
     display: block;
   }
+}
+  
 
 @media (max-width: 768px) {
   .icono {
@@ -637,10 +638,3 @@ width: 100%;
     padding: 0 1rem;
   }
 }
-
-
-
-
-
-
-
