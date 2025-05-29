@@ -196,6 +196,14 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
+.anuncio {
+  width: 728px;
+  height: 90px;
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) { 
   header {  /*Cambia el header a columna (logo arriba y menú abajo desplegable)*/
     flex-direction: column;
@@ -243,10 +251,18 @@ body {
     max-width: 300px;
   }
 
+
+
 @media (max-width: 480px) { /*telefonos mas chicos*/
   .contenido h1 {
     font-size: 1.6rem;
   }
+
+.anuncio {
+  width: 300px;
+  height: 600px;
+  display: block
+}
 
   .contenido h2 {
     font-size: 1.2rem;
