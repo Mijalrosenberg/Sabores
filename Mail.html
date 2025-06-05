@@ -2,18 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Campaña Sabores</title>
-  <style>
-    @media (max-width: 600px) {
-      .imagenes-container {
-        flex-direction: column !important;
-        align-items: center !important;
-      }
-      .imagen {
-        width: 100% !important;
-      }
-    }
-  </style>
 </head>
 <body style="display: flex; align-items: center; justify-content: center; font-family: 'Segoe UI', sans-serif; background-color: #fffaf5; padding: 20px; margin: 0;">
 
@@ -26,15 +16,15 @@
     </div>
 
     <!-- Imágenes con textos -->
-    <div class="imagenes-container" style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px;">
+    <div class="imagenes-container" style="display: flex; flex-wrap: wrap; justify-content: center;">
       
-      <div class="imagen" style="width: 50%; text-align: center;">
+      <div class="imagen" style="width: 50%; min-width: 300px; text-align: center; padding: 10px; box-sizing: border-box;">
         <img src="https://mijalrosenberg.github.io/Sabores/tarta-cebolla.png" alt="Tarta de cebolla" style="width: 100%; border-radius: 8px;">
         <h3 style="font-size: 16px; color: #f4b129; margin: 10px 0 4px;">Tarta de cebolla</h3>
         <p style="font-size: 14px; color: #555; margin: 0; padding: 0 6px;">Rellena, sabrosa y con masa casera horneada al día.</p>
       </div>
       
-      <div class="imagen" style="width: 50%; text-align: center;">
+      <div class="imagen" style="width: 50%; min-width: 300px; text-align: center; padding: 10px; box-sizing: border-box;">
         <img src="https://mijalrosenberg.github.io/Sabores/Empanada.png" alt="Empanadas caseras" style="width: 100%; border-radius: 8px;">
         <h3 style="font-size: 16px; color: #f4b129; margin: 10px 0 4px;">Empanadas caseras</h3>
         <p style="font-size: 14px; color: #555; margin: 0; padding: 0 6px;">Con rellenos variados: carne, verdura o queso. ¡Deliciosas!</p>
