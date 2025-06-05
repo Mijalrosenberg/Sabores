@@ -4,126 +4,47 @@
   <meta charset="UTF-8">
   <title>Campaña Sabores</title>
   <style>
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #fffaf5;
-        padding: 20px;
-        padding-top: 0%;
-}
-
-    .contenedor {
-      max-width: 600px;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .texto {
-      text-align: center;
-    }
-
-    .texto h1 {
-      font-size: 22px;
-      color: #f4b129;
-      margin-bottom: 10px;
-    }
-
-    .texto p {
-      font-size: 16px;
-      color: #444;
-      margin: 0 0 20px;
-    }
-
-    .imagenes-container {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .imagen {
-      width: 50%;
-      text-align: center;
-    }
-
-    .imagen img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .imagen h3 {
-      font-size: 16px;
-      color: #f4b129;
-      margin: 10px 0 4px;
-    }
-
-    .imagen p {
-      font-size: 14px;
-      color: #555;
-      margin: 0;
-      padding: 0 6px;
-    }
-
-    .boton {
-      text-align: center;
-      padding: 20px 0;
-    }
-
-    .boton a {
-      background-color: #f4b129;
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      padding: 12px 20px;
-      border-radius: 6px;
-      display: inline-block;
-      font-weight: bold;
-    }
-
     @media (max-width: 600px) {
       .imagenes-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column !important;
+        align-items: center !important;
       }
-
       .imagen {
-        width: 100%;
+        width: 100% !important;
       }
     }
   </style>
 </head>
-<body>
+<body style="display: flex; align-items: center; justify-content: center; font-family: 'Segoe UI', sans-serif; background-color: #fffaf5; padding: 20px; margin: 0;">
 
-  <div class="contenedor">
+  <div style="max-width: 600px; background-color: white; padding: 20px; border-radius: 10px; margin: auto; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
 
     <!-- Texto -->
-    <div class="texto">
-      <h1>¡Probá el menú del día!</h1>
-      <p>Comidas frescas, caseras y listas para disfrutar donde estés.</p>
+    <div style="text-align: center;">
+      <h1 style="font-size: 22px; color: #f4b129; margin-bottom: 10px;">¡Probá el menú del día!</h1>
+      <p style="font-size: 16px; color: #444; margin: 0 0 20px;">Comidas frescas, caseras y listas para disfrutar donde estés.</p>
     </div>
 
     <!-- Imágenes con textos -->
-    <div class="imagenes-container">
-      <div class="imagen">
-        <img src="https://mijalrosenberg.github.io/Sabores/tarta-cebolla.png" alt="Tarta de cebolla">
-        <h3>Tarta de cebolla</h3>
-        <p>Rellena, sabrosa y con masa casera horneada al día.</p>
+    <div class="imagenes-container" style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px;">
+      
+      <div class="imagen" style="width: 50%; text-align: center;">
+        <img src="https://mijalrosenberg.github.io/Sabores/tarta-cebolla.png" alt="Tarta de cebolla" style="width: 100%; border-radius: 8px;">
+        <h3 style="font-size: 16px; color: #f4b129; margin: 10px 0 4px;">Tarta de cebolla</h3>
+        <p style="font-size: 14px; color: #555; margin: 0; padding: 0 6px;">Rellena, sabrosa y con masa casera horneada al día.</p>
       </div>
-      <div class="imagen">
-        <img src="https://mijalrosenberg.github.io/Sabores/Empanada.png" alt="Empanadas caseras">
-        <h3>Empanadas caseras</h3>
-        <p>Con rellenos variados: carne, verdura o queso. ¡Deliciosas!</p>
+      
+      <div class="imagen" style="width: 50%; text-align: center;">
+        <img src="https://mijalrosenberg.github.io/Sabores/Empanada.png" alt="Empanadas caseras" style="width: 100%; border-radius: 8px;">
+        <h3 style="font-size: 16px; color: #f4b129; margin: 10px 0 4px;">Empanadas caseras</h3>
+        <p style="font-size: 14px; color: #555; margin: 0; padding: 0 6px;">Con rellenos variados: carne, verdura o queso. ¡Deliciosas!</p>
       </div>
+
     </div>
 
     <!-- Botón -->
-    <div class="boton">
-      <a href="https://mijalrosenberg.github.io/Sabores/menu-del-dia.html" target="_blank">Ver menú del dia</a>
+    <div style="text-align: center; padding: 20px 0;">
+      <a href="https://mijalrosenberg.github.io/Sabores/menu-del-dia.html" target="_blank" style="background-color: #f4b129; color: white; text-decoration: none; font-size: 16px; padding: 12px 20px; border-radius: 6px; display: inline-block; font-weight: bold;">Ver menú del día</a>
     </div>
 
   </div>
