@@ -228,6 +228,14 @@
     }
 
     window.addEventListener("load", () => mostrarSlide(index));
+
+    document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") {
+      cambiarSlide(1); // Flecha derecha → siguiente
+    } else if (e.key === "ArrowLeft") {
+      cambiarSlide(-1); // Flecha izquierda → anterior
+    }
+  });
   </script>
 </body>
 </html>
